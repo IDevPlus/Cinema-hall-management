@@ -1,0 +1,43 @@
+input, select {
+    border: 1px solid #393945;
+    background-color: transparent;
+    padding: .4rem .8rem !important;
+    border-radius: 8px;
+    width: 100% !important;
+    color: #fff !important;
+    font-family: "dana-b";
+}
+.submit input {
+    color: #fff;
+    font-family: "dana-h" !important;
+    cursor: pointer;
+    @include tr(.2s);
+    text-align: center;
+    background-color: var(--kt-text-primary) !important;
+}
+.submit input:hover {
+    width: 80% !important;
+}
+.progress {
+    background-color: #ffffff96 !important;
+    .consumed {
+        background-color: #fff !important;
+        z-index: 1000;
+        position: relative;
+        width: 0%;
+        @include tr(.5s);
+    }
+}
+.btn {
+    padding: .5rem .8rem;
+    background-color: var(--kt-text-primary);
+    border-radius: 5px;
+    text-align: center;
+    @include tr(.4s);
+}
+.btn:hover {
+    opacity: .9;
+}
+option {
+    color: #393945 !important;
+}

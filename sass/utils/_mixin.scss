@@ -1,0 +1,6 @@
+@mixin trv {
+    transition: all 0.3s ease;
+}
+@mixin tr($time) {
+    transition: all $time ease;
+}

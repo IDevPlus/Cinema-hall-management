@@ -1,0 +1,14 @@
+@import "../pages/dashboard";
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+.z-full {
+    z-index: 1000000000 !important;
+}
+.minh-50 {
+    min-height: 50% !important;
+}

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../assets/css/fonts.min.css">
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+    <link rel="stylesheet" href="../assets/css/style.frw.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="../assets/css/dark.min.css"> -->
+</head>
+<body>
+    <div class="add-event box-open close absolute z-[10000000] flex justify-center items-center w-[100%] h-[100vh]">
+        <div class="bx-op w-[40%] h-[90%] rounded-[10px] flex flex-col gap-3 p-5">
+            <div class="header" dir="ltr">
+                <svg class="light cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor"></rect>
+                    <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor"></rect>
+                </svg>
+            </div>
+            <div class="bx-wrapper flex flex-col items-center justify-center">
+                <div class="bx-title light">
+                    <p class="dana-h text-lg">ایجاد رویداد</p>
+                </div>
+                <div class="wrapper-app w-[100%] h-[100%] light">
+                    <div class="form flex flex-col items-center w-[100%] gap-4 flex-wrap p-[2rem]">
+                        <div class="w-[100%] name">
+                            <p class="text text-sm require">نام و نام‌خانوادگی</p>
+                            <input type="text" id="name" placeholder="نام و نام‌خانوادگی خود را وارد کنید">
+                        </div>
+                        <div class="w-[100%] date">
+                            <p class="text text-sm require">تاریخ</p>
+                            <input id="date" class="datepicker-demo num" type="text" id="date" placeholder="تاریخ شروع رویداد را وارد کنید">
+                            <div id="inline-example"></div>
+                        </div>
+                        <div class="w-[100%] lounge">
+                            <p class="text text-sm require">سالن</p>
+                            <select name="" id="lounge">
+                                <option value="سالن یک">سالن یک</option>
+                            </select>
+                        </div>
+                        <div class="w-[100%] type">
+                            <p class="text text-sm require">نوع</p>
+                            <select name="" id="type">
+                                <option value="خالی">خالی</option>
+                            </select>
+                        </div>
+                        <div class="w-[100%] singer">
+                            <p class="text text-sm require">خواننده</p>
+                            <select name="" id="singer">
+                                <option value="خالی">خالی</option>
+                            </select>
+                        </div>
+                        <div class="w-[100%] mt-4 submit flex items-center justify-center">
+                            <input type="submit" id="submit" value="ثبت">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container w-[100vw] flex flex-row relative">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="../assets/media/logos/default-dark.svg" alt="">
+                <img width="30" height="30" class="none" src="../assets/media/logos/default-small.svg" alt="">
+            </div>
+            <ul class="item flex mt-5 flex-col">
+                <li class="flex cursor-pointer items-center flex-col py-1 px-5 gap-2 w-[100%]">
+                    <div class="flex items-center justify-between w-[100%]">
+                        <div class="flex gap-3 light vsgr">
+                            <div class="icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2" y="2" width="9" height="9" rx="2" fill="currentColor"></rect>
+                                    <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="currentColor"></rect>
+                                    <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="currentColor"></rect>
+                                    <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="currentColor"></rect>
+                                </svg>
+                            </div>
+                            <div class="title dana-l">
+                                مدیریت رویداد
+                            </div>
+                        </div>
+                        <div class="arrow light">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <ul class="box w-[100%] gap-1 flex flex-col">
+                        <li class="flex items-center gap-2" onclick="redirect('./index.html')">
+                            <div class="title flex items-center gap-2">
+                                <span class="dot"></span>
+                                <span>رویداد ها</span>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="flex items-center cursor-pointer flex-col py-1 px-5 gap-2 w-[100%]">
+                    <div class="flex items-center justify-between w-[100%]">
+                        <div class="flex gap-3 light vsgr">
+                            <div class="icon">
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.3" d="M8.9 21L7.19999 22.6999C6.79999 23.0999 6.2 23.0999 5.8 22.6999L4.1 21H8.9ZM4 16.0999L2.3 17.8C1.9 18.2 1.9 18.7999 2.3 19.1999L4 20.9V16.0999ZM19.3 9.1999L15.8 5.6999C15.4 5.2999 14.8 5.2999 14.4 5.6999L9 11.0999V21L19.3 10.6999C19.7 10.2999 19.7 9.5999 19.3 9.1999Z" fill="currentColor"></path>
+                                    <path d="M21 15V20C21 20.6 20.6 21 20 21H11.8L18.8 14H20C20.6 14 21 14.4 21 15ZM10 21V4C10 3.4 9.6 3 9 3H4C3.4 3 3 3.4 3 4V21C3 21.6 3.4 22 4 22H9C9.6 22 10 21.6 10 21ZM7.5 18.5C7.5 19.1 7.1 19.5 6.5 19.5C5.9 19.5 5.5 19.1 5.5 18.5C5.5 17.9 5.9 17.5 6.5 17.5C7.1 17.5 7.5 17.9 7.5 18.5Z" fill="currentColor"></path>
+                                </svg>
+                            </div>
+                            <div class="title dana-l">
+                                مدیریت سالن ها
+                            </div>
+                        </div>
+                        <div class="arrow light">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <ul class="box w-[100%] gap-1 flex flex-col">
+                        <li class="flex items-center gap-2" onclick="redirect('./Lounge.html')">
+                            <div class="title flex items-center gap-2">
+                                <span class="dot"></span>
+                                <span>سالن ها</span>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="flex items-center cursor-pointer flex-col py-1 px-5 gap-2 w-[100%]">
+                    <div class="flex items-center justify-between w-[100%]">
+                        <div class="flex gap-3 light vsgr">
+                            <div class="icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 14H18V10H20C20.6 10 21 10.4 21 11V13C21 13.6 20.6 14 20 14ZM21 19V17C21 16.4 20.6 16 20 16H18V20H20C20.6 20 21 19.6 21 19ZM21 7V5C21 4.4 20.6 4 20 4H18V8H20C20.6 8 21 7.6 21 7Z" fill="currentColor"></path>
+                                    <path opacity="0.3" d="M17 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H17C17.6 2 18 2.4 18 3V21C18 21.6 17.6 22 17 22ZM10 7C8.9 7 8 7.9 8 9C8 10.1 8.9 11 10 11C11.1 11 12 10.1 12 9C12 7.9 11.1 7 10 7ZM13.3 16C14 16 14.5 15.3 14.3 14.7C13.7 13.2 12 12 10.1 12C8.10001 12 6.49999 13.1 5.89999 14.7C5.59999 15.3 6.19999 16 7.39999 16H13.3Z" fill="currentColor"></path>
+                                </svg>
+                            </div>
+                            <div class="title dana-l">
+                                مدیریت فروش
+                            </div>
+                        </div>
+                        <div class="arrow light">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <ul class="box w-[100%] gap-1 flex flex-col">
+                        <li class="flex items-center gap-2" onclick="redirect('./ListOrders.html')">
+                            <div class="check flex items-center gap-2">
+                                <span class="dot"></span>
+                                <span>لیست سفارشات</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-2" onclick="redirect('./ListPayments.html')">
+                            <div class="title flex items-center gap-2">
+                                <span class="dot"></span>
+                                <span>لیست پرداختی ها</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-2" onclick="redirect('./Reports.html')">
+                            <div class="title flex items-center gap-2">
+                                <span class="dot"></span>
+                                <span>گزارشات</span>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="flex items-center transition ease-in-out delay-50 cursor-pointer hover:opacity-75 text-sm flex justify-between primary py-1 px-5 gap-2 w-[100%]">
+                    <div class="flex light vsgr other-vst justify-between w-[100%]" dir="ltr">
+                        <div class="icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor"></rect>
+                                <rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor"></rect>
+                                <rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor"></rect>
+                            </svg>
+                        </div>
+                        <div class="title dana-l">
+                            دیگر موارد
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="wrapper">
+            <div class="header relative">
+                <div class="collaps absolute top-[19px] right-[-.8rem] flex items-center justify-center text-center">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.5" d="M14.2657 11.4343L18.45 7.25C18.8642 6.83579 18.8642 6.16421 18.45 5.75C18.0358 5.33579 17.3642 5.33579 16.95 5.75L11.4071 11.2929C11.0166 11.6834 11.0166 12.3166 11.4071 12.7071L16.95 18.25C17.3642 18.6642 18.0358 18.6642 18.45 18.25C18.8642 17.8358 18.8642 17.1642 18.45 16.75L14.2657 12.5657C13.9533 12.2533 13.9533 11.7467 14.2657 11.4343Z" fill="currentColor"></path>
+                        <path d="M8.2657 11.4343L12.45 7.25C12.8642 6.83579 12.8642 6.16421 12.45 5.75C12.0358 5.33579 11.3642 5.33579 10.95 5.75L5.40712 11.2929C5.01659 11.6834 5.01659 12.3166 5.40712 12.7071L10.95 18.25C11.3642 18.6642 12.0358 18.6642 12.45 18.25C12.8642 17.8358 12.8642 17.1642 12.45 16.75L8.2657 12.5657C7.95328 12.2533 7.95328 11.7467 8.2657 11.4343Z" fill="currentColor"></path>
+                    </svg>
+                </div>
+                <div class="nav ml-[1rem] mr-[2rem] h-[100%] flex items-center justify-between">
+                    <ul class="parent-nav h-[100%] flex flex-row gap-1">
+                        <li>
+                            <div class="item flex items-center justify-center item-check">
+                                <span>داشبورد ها</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item flex items-center justify-center">
+                                <span>صفحه ها</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item flex items-center justify-center">
+                                <span>برنامه ها</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item flex items-center justify-center">
+                                <span>چیدمان ها</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item flex items-center justify-center">
+                                <span>راهنما</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="apps flex gap-2">
+                        <li class="flex items-center justify-center">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="currentColor"></rect>
+                                <path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="currentColor"></path>
+                            </svg>
+                        </li>
+                        <li class="flex items-center justify-center">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="8" y="9" width="3" height="10" rx="1.5" fill="currentColor"></rect>
+                                <rect opacity="0.5" x="13" y="5" width="3" height="14" rx="1.5" fill="currentColor"></rect>
+                                <rect x="18" y="11" width="3" height="8" rx="1.5" fill="currentColor"></rect>
+                                <rect x="3" y="13" width="3" height="6" rx="1.5" fill="currentColor"></rect>
+                            </svg>
+                        </li>
+                        <li class="flex items-center justify-center">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.2929 2.70711C11.6834 2.31658 12.3166 2.31658 12.7071 2.70711L15.2929 5.29289C15.6834 5.68342 15.6834 6.31658 15.2929 6.70711L12.7071 9.29289C12.3166 9.68342 11.6834 9.68342 11.2929 9.29289L8.70711 6.70711C8.31658 6.31658 8.31658 5.68342 8.70711 5.29289L11.2929 2.70711Z" fill="currentColor"></path>
+                                <path d="M11.2929 14.7071C11.6834 14.3166 12.3166 14.3166 12.7071 14.7071L15.2929 17.2929C15.6834 17.6834 15.6834 18.3166 15.2929 18.7071L12.7071 21.2929C12.3166 21.6834 11.6834 21.6834 11.2929 21.2929L8.70711 18.7071C8.31658 18.3166 8.31658 17.6834 8.70711 17.2929L11.2929 14.7071Z" fill="currentColor"></path>
+                                <path opacity="0.3" d="M5.29289 8.70711C5.68342 8.31658 6.31658 8.31658 6.70711 8.70711L9.29289 11.2929C9.68342 11.6834 9.68342 12.3166 9.29289 12.7071L6.70711 15.2929C6.31658 15.6834 5.68342 15.6834 5.29289 15.2929L2.70711 12.7071C2.31658 12.3166 2.31658 11.6834 2.70711 11.2929L5.29289 8.70711Z" fill="currentColor"></path>
+                                <path opacity="0.3" d="M17.2929 8.70711C17.6834 8.31658 18.3166 8.31658 18.7071 8.70711L21.2929 11.2929C21.6834 11.6834 21.6834 12.3166 21.2929 12.7071L18.7071 15.2929C18.3166 15.6834 17.6834 15.6834 17.2929 15.2929L14.7071 12.7071C14.3166 12.3166 14.3166 11.6834 14.7071 11.2929L17.2929 8.70711Z" fill="currentColor"></path>
+                            </svg>
+                        </li>
+                        <li class="flex items-center justify-center relative">
+                            <span id="ticktack"></span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.3" d="M20 3H4C2.89543 3 2 3.89543 2 5V16C2 17.1046 2.89543 18 4 18H4.5C5.05228 18 5.5 18.4477 5.5 19V21.5052C5.5 22.1441 6.21212 22.5253 6.74376 22.1708L11.4885 19.0077C12.4741 18.3506 13.6321 18 14.8167 18H20C21.1046 18 22 17.1046 22 16V5C22 3.89543 21.1046 3 20 3Z" fill="currentColor"></path>
+                                <rect x="6" y="12" width="7" height="2" rx="1" fill="currentColor"></rect>
+                                <rect x="6" y="7" width="12" height="2" rx="1" fill="currentColor"></rect>
+                            </svg>
+                        </li>
+                        <li class="flex items-center justify-center">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="2" width="9" height="9" rx="2" fill="currentColor"></rect>
+                                <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="currentColor"></rect>
+                                <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="currentColor"></rect>
+                                <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="currentColor"></rect>
+                            </svg>
+                        </li>
+                        <li class="flex items-center justify-center">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.0647 5.43757C19.3421 5.43757 19.567 5.21271 19.567 4.93534C19.567 4.65796 19.3421 4.43311 19.0647 4.43311C18.7874 4.43311 18.5625 4.65796 18.5625 4.93534C18.5625 5.21271 18.7874 5.43757 19.0647 5.43757Z" fill="currentColor"></path>
+                                <path d="M20.0692 9.48884C20.3466 9.48884 20.5714 9.26398 20.5714 8.98661C20.5714 8.70923 20.3466 8.48438 20.0692 8.48438C19.7918 8.48438 19.567 8.70923 19.567 8.98661C19.567 9.26398 19.7918 9.48884 20.0692 9.48884Z" fill="currentColor"></path>
+                                <path d="M12.0335 20.5714C15.6943 20.5714 18.9426 18.2053 20.1168 14.7338C20.1884 14.5225 20.1114 14.289 19.9284 14.161C19.746 14.034 19.5003 14.0418 19.3257 14.1821C18.2432 15.0546 16.9371 15.5156 15.5491 15.5156C12.2257 15.5156 9.48884 12.8122 9.48884 9.48886C9.48884 7.41079 10.5773 5.47137 12.3449 4.35752C12.5342 4.23832 12.6 4.00733 12.5377 3.79251C12.4759 3.57768 12.2571 3.42859 12.0335 3.42859C7.32556 3.42859 3.42857 7.29209 3.42857 12C3.42857 16.7079 7.32556 20.5714 12.0335 20.5714Z" fill="currentColor"></path>
+                                <path d="M13.0379 7.47998C13.8688 7.47998 14.5446 8.15585 14.5446 8.98668C14.5446 9.26428 14.7693 9.48891 15.0469 9.48891C15.3245 9.48891 15.5491 9.26428 15.5491 8.98668C15.5491 8.15585 16.225 7.47998 17.0558 7.47998C17.3334 7.47998 17.558 7.25535 17.558 6.97775C17.558 6.70015 17.3334 6.47552 17.0558 6.47552C16.225 6.47552 15.5491 5.76616 15.5491 4.93534C15.5491 4.65774 15.3245 4.43311 15.0469 4.43311C14.7693 4.43311 14.5446 4.65774 14.5446 4.93534C14.5446 5.76616 13.8688 6.47552 13.0379 6.47552C12.7603 6.47552 12.5357 6.70015 12.5357 6.97775C12.5357 7.25535 12.7603 7.47998 13.0379 7.47998Z" fill="currentColor"></path>
+                            </svg>
+                        </li>
+                        <li id="profile">
+                            <img src="../assets/media/avatars/300-1.jpg" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page flex flex-col gap-5 p-5">
+                <div class="page-address dana-b flex justify-between">
+                    <div class="flex dana-b flex-col">
+                        <span>لیست سفارشات</span>
+                        <p>خانه - لیست سفارشات</p>
+                    </div>
+                    <div class="none dana-b">
+                        <button class="btn" id="addEvent">
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="app flex flex-col gap-2">
+                    <section class="flex flex-row gap-3 h-[100%]">
+                        <div class="section-left w-[60%] gap-3 flex-col flex">
+                            <div class="box-parent flex gap-3 h-[50%]">
+                                <div class="box flex flex-col h-[100%] justify-between" style="background-color: #F1416C;background-image:url('../assets/media/patterns/vector-1.png')">
+                                    <div class="title-box">
+                                        <p class="text-3xl num" id="count-event">0</p>
+                                        <span>سفارشات فعال</span>
+                                    </div>
+                                    <div class="pending w-[100%] flex flex-col gap-1 items-center">
+                                        <div class="title-pending w-[100%] light flex justify-between items-center">
+                                            <p class="text-sm">ظرفیت باقی مانده</p>
+                                            <span class="text-[10px] num">نامحدود</span>
+                                        </div>
+                                        <div class="progress w-[100%] h-[.5rem] rounded-[10px]">
+                                            <div class="consumed h-[100%] rounded-[10px]"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box flex flex-col h-[100%] justify-between bg-card">
+                                    <div class="title-box flex justify-between items-center">
+                                        <p class="text-3xl num flex items-center gap-1">0 <span class="text-sm">ريال</span></p>
+                                        <div class="svg-icon flex">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor"></rect>
+                                                <path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor"></path>
+                                            </svg>
+                                            <p class="num text-sm">0%</p>
+                                        </div>
+                                    </div>
+                                    <div class="pending w-[100%] flex text-sm gap-1 items-center justify-between">
+                                        <div class="bx light flex-col flex gap-1">
+                                            <p class="flex items-center gap-1">رویداد</p>
+                                            <p class="flex items-center gap-1">سالن</p>
+                                            <p class="flex items-center gap-1">دیگر</p>
+                                        </div>
+                                        <div class="bx light flex flex-col gap-1">
+                                            <p class="num">0 <span class="text-sm">ريال</span></p>
+                                            <p class="num">0 <span class="text-sm">ريال</span></p>
+                                            <p class="num">0 <span class="text-sm">ريال</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-parent flex-col light flex gap-3 minh-50 w-[100%] p-5 bg-card rounded-[10px]">
+                                <div class="flex flex-col light">
+                                    <p class="text dana-h">لیست سفارشات ها</p>
+                                    <span class="text-sm opacity-75">ویرایش شده در لحظه‌ای پیش</span>
+                                </div>
+                                <table class="items-parent light">
+                                    <thead>
+                                        <tr class="gray400">
+                                            <th class="text-sm">نامشخص</th>
+                                            <th class="text-sm">نامشخص</th>
+                                            <th class="text-sm">نامشخص</th>
+                                            <th class="text-sm">نامشخص</th>
+                                            <th class="text-sm">نامشخص</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tlistEvent" class="text-sm"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="section-right w-[40%]">
+                            <div class="wrapper-app w-[100%] h-[26rem] flex p-[3rem] pb-[0] justify-between items-center flex-col gap-3" style="background-image: url('../assets/media/stock/900x600/42.png');">
+                                <div class="text light">
+                                    <p class="dana-h text-3xl flex gap-2">ارتقا به حساب <span class="flex flex-col gap-1">ویژه</span></p>
+                                </div>
+                                <a href="#" class="btn">
+                                    <span class="dana-b">ارتقا</span>
+                                </a>
+                                <img src="../assets/media/illustrations/misc/upgrade-dark.svg" alt="">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/date.persian.js"></script>
+    <script src="../assets/js/sweetalert2.all.min.js"></script>
+    <script src="../assets/js/collaps.js"></script>
+    <script src="../assets/js/events.js"></script>
+    <script src="../assets/js/open-bx.js"></script>
+    <script src="../assets/js/redirect.js"></script>
+    <script src="../assets/js/showbox.js"></script>
+    <script src="../assets/js/listevent.js"></script>
+</body>
+</html>
